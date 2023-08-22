@@ -41,8 +41,7 @@ describe('calculateCarrierFees', () => {
     ];
     const result = calculateCarrierFees('USPS', items);
     expect(result).to.eq(1056);
-  }
-  );
+  });
   it('should calculate the correct fee for FEDEX', () => {
     const items: Array<OrderItem> = [
       {
@@ -60,6 +59,5 @@ describe('calculateCarrierFees', () => {
     ];
     const result = calculateCarrierFees('FEDEX', items);
     expect(result).to.eq(1009);
-  }
-  );
+  });
 });

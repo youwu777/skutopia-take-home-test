@@ -57,4 +57,4 @@ export const deriveQuoteCarriersOutcome = (
     outcome: 'SUCCESS',
     order,
   };
-}
+};

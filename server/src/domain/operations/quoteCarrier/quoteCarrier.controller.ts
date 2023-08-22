@@ -7,7 +7,7 @@ import {
 
 export const quoteCarriers = async (
   orderId: Order['id'],
-  carriers:  Array<CarrierCode>
+  carriers: Array<CarrierCode>
 ): Promise<QuoteCarriersResult> => {
   const order = await ordersRepo.getOrder(orderId);
 
@@ -19,6 +19,6 @@ export const quoteCarriers = async (
   }
 
   return result;
-}
+};
 
 export { QuoteCarriersResult };

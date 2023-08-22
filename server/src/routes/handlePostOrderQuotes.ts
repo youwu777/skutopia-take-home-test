@@ -40,12 +40,13 @@ export const handlePostOrderQuotes = withAsyncErrorHandling(
 
     const result = await quoteCarriers(orderId, carriers);
 
-    const outcomeStatusCodeMap: Record<QuoteCarriersResult['outcome'], number> = {
-      SUCCESS: 200,
-      ORDER_ALREADY_BOOKED: 200,
-      ORDER_NOT_FOUND: 404,
-      INVALID_ORDER_STATUS: 400,
-    };
+    const outcomeStatusCodeMap: Record<QuoteCarriersResult['outcome'], number> =
+      {
+        SUCCESS: 200,
+        ORDER_ALREADY_BOOKED: 200,
+        ORDER_NOT_FOUND: 404,
+        INVALID_ORDER_STATUS: 400,
+      };
 
     res.status(outcomeStatusCodeMap[result.outcome]).json(result);
   }
