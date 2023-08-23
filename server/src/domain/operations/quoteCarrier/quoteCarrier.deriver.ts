@@ -15,7 +15,6 @@ type OrderNotFound = {
 };
 type OrderAlreadyBooked = {
   outcome: 'ORDER_ALREADY_BOOKED';
-  order: Order;
 };
 
 export type QuoteCarriersResult =
@@ -36,7 +35,6 @@ export const deriveQuoteCarriersOutcome = (
   if (order.status === 'BOOKED') {
     return {
       outcome: 'ORDER_ALREADY_BOOKED',
-      order,
     };
   }
   if (order.status !== 'RECEIVED') {

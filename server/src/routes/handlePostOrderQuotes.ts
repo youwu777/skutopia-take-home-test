@@ -43,7 +43,7 @@ export const handlePostOrderQuotes = withAsyncErrorHandling(
     const outcomeStatusCodeMap: Record<QuoteCarriersResult['outcome'], number> =
       {
         SUCCESS: 200,
-        ORDER_ALREADY_BOOKED: 200,
+        ORDER_ALREADY_BOOKED: 400,
         ORDER_NOT_FOUND: 404,
         INVALID_ORDER_STATUS: 400,
       };
